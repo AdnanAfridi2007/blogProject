@@ -1,16 +1,7 @@
-import localFont from "next/font/local";
+// layout.js
 import "./globals.css";
-
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+import Navbar from "@/components/Navbar";
+import { ThemeProvider } from "@/components/theme-provider";
 
 export const metadata = {
   title: "Create Next App",
@@ -19,11 +10,17 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+    <html lang="en" className="scroll-p-20 scroll-smooth">
+      <body>
+        <ThemeProvider
+          attribute="class" // ensures 'dark' class is toggled
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Navbar />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
