@@ -203,7 +203,7 @@ export default function Home() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <div className=" p-6 rounded-lg shadow-lg transform transition duration-500 hover:scale-105 border">
           <p className="text-lg font-medium ">
-            "This service is amazing! It has changed my life for the better."
+            This service is amazing! It has changed my life for the better.
           </p>
           <div className="mt-4">
             <p className="text-base font-medium ">John Doe</p>
@@ -212,7 +212,7 @@ export default function Home() {
         </div>
         <div className=" p-6 rounded-lg shadow-lg transform transition duration-500 hover:scale-105 border">
           <p className="text-lg font-medium ">
-            "Highly recommend to anyone looking for quality and reliability."
+            Highly recommend to anyone looking for quality and reliability.
           </p>
           <div className="mt-4">
             <p className="text-base font-medium ">Jane Smith</p>
@@ -221,7 +221,7 @@ export default function Home() {
         </div>
         <div className="p-6 rounded-lg shadow-lg transform transition duration-500 hover:scale-105 border">
           <p className="text-lg font-medium ">
-            "Exceptional service and support. Five stars!"
+            Exceptional service and support. Five stars!
           </p>
           <div className="mt-4">
             <p className="text-base font-medium ">Alice Johnson</p>
