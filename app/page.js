@@ -1,5 +1,5 @@
 "use client"
-import React, {useEffect, useRef} from "react";
+import React, { useEffect, useRef } from "react"; // Use these directly
 import Typed from 'typed.js';
 import { Button } from "@/components/ui/button"
 import TopBlogsSection from "@/components/TopBlogsSection";
@@ -30,18 +30,19 @@ const blogs = [
 
 export default function Home() {
 
-  const el = React.useRef(null);
+  const el = useRef(null);
 
-  React.useEffect(() => {
-    const typed = new Typed(el.current, {
-      strings: ['<i>Coding</i>.', ' Web Development.', 'Tailwind'],
-      typeSpeed: 50,
-    });
+  useEffect(() => {
+    if (el.current) {
+      const typed = new Typed(el.current, {
+        strings: ['<i>Coding</i>.', ' Web Development.', 'Tailwind'],
+        typeSpeed: 50,
+      });
 
-    return () => {
-      // Destroy Typed instance during cleanup to stop animation
-      typed.destroy();
-    };
+      return () => {
+        typed.destroy();
+      };
+    }
   }, []);
 
 
@@ -56,9 +57,6 @@ export default function Home() {
           Open source Tailwind UI components and templates to <br className="hidden lg:block" /> bootstrap your new apps, projects or landing sites!
         </p>
         <div className="mt-6 bg-transparent border rounded-lg dark:border-gray-700 lg:w-2/3 focus-within:border-primary focus-within:ring focus-within:ring-primary dark:focus-within:border-primary focus-within:ring-opacity-20">
-          <form action="https://www.creative-tim.com/twcomponents/search" className="flex flex-wrap justify-between md:flex-row">
-            
-          </form>
         </div>
       </div>
       <div className="w-full mt-4 lg:mt-0 lg:w-1/2">
